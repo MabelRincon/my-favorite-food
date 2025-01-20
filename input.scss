@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+$primaryColor: #FF5722;
+$secondaryColor: #E08E45;
+$backgroundColor: #ffffff;
+$textColor: #000000;
+
+$fontFamily: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+body {
+    font-family: $fontFamily;
+    background-color: $backgroundColor;
+    color: $textColor;
+    max-width: 56.25rem;
+    margin: 0 auto;
+    height: 100%;
+}
+
+h1 {
+    color: $primaryColor;
+    margin: 1.25rem;
+}
+
+header {
+    div {
+        width: 100%;
+        h1 {
+            font-size: 2.0rem;
+        }
+        img {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+img.hero {
+    width: 100%;
+}
+
+.recipe_details {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+
+    #ingredient_list {
+        background-color: $secondaryColor;
+        border-radius: 0 0 0.625rem 0.625rem;
+        padding: 1.25rem;
+        width: 55%;
+    }
+
+    #cooking_time {
+        width: 20%;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            background-color: $primaryColor;
+            font-size: 0.875rem;
+            border: none;
+            margin: 0.3125rem 0;
+            padding: 0.3125rem;
+            border-radius: 0.3125rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($primaryColor, 10%);
+            }
+        }
+
+        #start_button {
+            border-radius: 0.625rem;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        #stop_button {
+            border-radius: 0.625rem;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        #cooking_time_display,
+        #timer_container {
+            margin: 3.125rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .clock {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.0rem;
+        }
+
+        #timer_buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 3.125rem;
+            margin-bottom: 3.125rem;
+        }
+
+        #start_button_container {
+            margin-left: auto;
+        }
+
+        #stop_button_container {
+            margin-right: auto;
+        }
+    }
+}
+
+#preparation_container {
+    display: block;
+    margin-bottom: 15%;
+
+    #step_boxes_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.25rem;
+
+        .step_box {
+            display: flex;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 0.3125rem;
+
+            .step_number {
+                background-color: $primaryColor;
+                height: 2.5rem;
+                width: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                margin-right: 1.25rem;
+                color: white;
+                font-weight: bold;
+            }
+
+            .step_description {
+                flex-grow: 1;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+#footer_container {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 0.0625rem #f7b32b;
+    padding: 1.25rem;
+    align-items: center;
+
+    div {
+        img {
+            margin-left: 0.3125rem;
+        }
+    }
+}
+
+@media (max-width: 48rem) {
+    .recipe_details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #ingredient_list,
+    #cooking_time {
+        width: 90%;
+    }
+
+    #step_boxes_container {
+        grid-template-columns: 1fr;
+    }
+
+    #footer_container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

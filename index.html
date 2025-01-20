@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Food</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Coronation Chicken</h1>
+        </nav>
+        <figure>
+            <img class="hero" src="./assets/img/coronation-chicken-in-sandwich.jpg" alt="Coronation Chicken" />
+            <figcaption>Coronation Chicken in a sandwich</figcaption>
+        </figure>
+    </header>
+
+    <main>
+        <section class="recipe_details">
+            <section id="ingredient_list">
+                <h1>Ingredients</h1>
+                <section>
+                    <h3>To cook the chicken:</h3>
+                    <label><input type="checkbox" /> 650 g Chicken breasts</label><br />
+                    <label><input type="checkbox" /> 3 tbsp Greek yoghurt</label><br />
+                    <label><input type="checkbox" /> 1 tbsp Mild curry powder</label><br />
+                </section>
+                <section>
+                    <h3>For the sauce:</h3>
+                    <label><input type="checkbox" /> 6 tbsp Mayonnaise</label><br />
+                    <label><input type="checkbox" /> 2 tbsp Greek yoghurt</label><br />
+                    <label><input type="checkbox" /> 2 tbsp Mango chutney</label><br />
+                    <label><input type="checkbox" /> 2 tsp Mild curry powder</label><br />
+                    <label><input type="checkbox" /> Sea salt and freshly ground black pepper</label><br />
+                    <label><input type="checkbox" /> 50 g Dried apricots, chopped into 1cm pieces</label><br />
+                </section>
+                <section>
+                    <h3>To serve:</h3>
+                    <label><input type="checkbox" /> 2 tbsp Flaked toasted almonds</label><br />
+                </section>
+            </section>
+
+            <section id="cooking_time">
+                <h1>Time</h1>
+                <div id="cooking_time_display">
+                    <img src="./assets/img/clock.png" alt="Clock icon for preparation time" />
+                    <div class="clock">00:30</div>
+                </div>
+                <div id="timer_container">
+                    <div id="timer_buttons">
+                        <button class="timer_button" id="five_minutes_btn">5</button>
+                        <button class="timer_button" id="ten_minutes_btn">10</button>
+                        <button class="timer_button" id="fifteen_minutes_btn">15</button>
+                        <button class="timer_button" id="thirty_minutes_btn">30</button>
+                    </div>
+                    <div id="timer">
+                        <img src="./assets/img/hourglass.png" alt="Hourglass icon for timer" />
+                        <div class="clock"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+                    </div>
+                    <button id="start_button">Start</button>
+                    <button id="stop_button">Stop</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="bottom_container" id="preparation_container">
+            <h1>Instructions</h1>
+            <div id="step_boxes_container">
+                <article class="step_box">
+                    <div class="step_number">1</div>
+                    <div class="step_description">Preheat the oven to 200°C.</div>
+                </article>
+                <article class="step_box">
+                    <div class="step_number">2</div>
+                    <div class="step_description">Put the chicken, Greek yoghurt, and curry powder into a large bowl and stir until well coated. Oil or line a baking tray with foil or greaseproof paper. Place the chicken on top.</div>
+                </article>
+                <article class="step_box">
+                    <div class="step_number">3</div>
+                    <div class="step_description">Roast the chicken for 18-20 minutes, carefully turning the chicken breasts halfway through the cooking time. Set aside to cool.</div>
+                </article>
+                <article class="step_box">
+                    <div class="step_number">4</div>
+                    <div class="step_description">Shred, slice, or chop the cooked chicken (I like to chop it into 1cm cubes). Put the chicken into a large bowl with the rest of the sauce ingredients and mix until well combined. Sprinkle over the almonds to serve.</div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer_container">
+            <div>&#169; Created by Mabel Rincon, inspired by <a href="https://www.tamingtwins.com/coronation-chicken/" target="_blank" rel="noopener noreferrer">Sara Rossi</a></div>
+            <div>
+                <img src="./assets/img/linkedin.png" alt="LinkedIn" />
+                <img src="./assets/img/instagram.png" alt="Instagram" />
+                <img src="./assets/img/facebook.png" alt="Facebook" />
+                <img src="./assets/img/twitter.png" alt="Twitter" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="timerSetup.js" type="module"></script>
+    <script src="timerControl.js" type="module"></script>
+</body>
+</html>
